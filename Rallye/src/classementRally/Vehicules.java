@@ -33,6 +33,12 @@ public abstract class Vehicules {
 	public CoPilot getCopilot() {
 		return copilot;
 	}
+
+	@Override
+	public String toString() {
+		return "Vehicules [puissance=" + puissance + ", modele=" + modele + ", pilot=" + pilot + ", copilot=" + copilot
+				+ "]";
+	}
 	     
 	
 }

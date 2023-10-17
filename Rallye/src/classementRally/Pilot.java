@@ -7,4 +7,9 @@ public class Pilot extends Personne {
 		
 	}
 
+	@Override
+	public String toString() {
+		return "Pilot [nom=" + nom + ", prenom=" + prenom + ", age=" + age + ", sang=" + sang + "]";
+	}
+
 }

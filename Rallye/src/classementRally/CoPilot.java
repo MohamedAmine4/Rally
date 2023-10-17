@@ -6,4 +6,9 @@ public class CoPilot extends Personne{
 		super(nom, prenom, age, sang);
 	}
 
+	@Override
+	public String toString() {
+		return "CoPilot [nom=" + nom + ", prenom=" + prenom + ", age=" + age + ", sang=" + sang + "]";
+	}
+
 }

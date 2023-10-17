@@ -23,6 +23,10 @@ public abstract class Personne {
 		public float getAge() {
 			return age;
 		}
+		@Override
+		public String toString() {
+			return "Personne [nom=" + nom + ", prenom=" + prenom + ", age=" + age + ", sang=" + sang + "]";
+		}
 		
         
         

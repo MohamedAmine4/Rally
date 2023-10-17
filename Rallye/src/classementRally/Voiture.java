@@ -17,6 +17,14 @@ public class Voiture extends Vehicules {
 	public double temp() {
 		return getPuissance()+getPilot().getAge()+(getCopilot().getAge());
 	}
+
+	@Override
+	public String toString() {
+		return "Voiture [puissance=" + puissance + ", modele=" + modele + ", pilot=" + pilot + ", copilot=" + copilot
+				+ "]";
+	}
+
+	
 	
 	
 }

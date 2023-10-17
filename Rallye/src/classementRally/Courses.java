@@ -24,9 +24,9 @@ public class Courses {
 		public void Inscrire(Voiture v) {
 			if(categorie=="A" && 0<v.puissance && v.puissance<200)
 			   voiture.add(v);
-			if(categorie=="N" && 200<=v.puissance && v.puissance<400)
+			else if(categorie=="N" && 200<=v.puissance && v.puissance<400)
 				   voiture.add(v);
-			if(categorie=="B" && 400<=v.puissance )
+			else if(categorie=="B" && 400<=v.puissance )
 				   voiture.add(v);
 			else 
 				System.out.println("La voiture ne correspond a la categorie de cet course ");
@@ -34,25 +34,30 @@ public class Courses {
 		
 		public ArrayList<Voiture> Classement(){
 			
-			ArrayList<Double> gagnant=new ArrayList<>();
-			ArrayList<Double> gagnanttrier=new ArrayList<>();
-			ArrayList<Voiture> gagnantfinal=new ArrayList<>();
+			ArrayList<Double> gagnant=new ArrayList<>();//list des temps des voitures
+			ArrayList<Voiture> gagnantfinal=new ArrayList<>();//list des voitures qui ont temp minimal vers max
 
 			for(Voiture v:voiture) {
 				gagnant.add(v.temp());
 			}
-			for(Double v:gagnant) {
-				double min=Collections.min(gagnant);
-				gagnanttrier.add(min);
-			}
-			for(Voiture v : voiture) {
-				for(int i=0;i<gagnanttrier.size();i++) {
-				if(v.temp()==gagnanttrier.get(i))
-					gagnantfinal.add(v);
+			Collections.sort(gagnant);
+			 for (Double entier : gagnant) {
+		            System.out.println(entier);
+		        }
+			for(Double g : gagnant) {
+				for(Voiture v : voiture) {
+				   if(v.temp()==g)
+					  
+					  gagnantfinal.add(v);
 			}
 				}
 			return gagnantfinal;
 		}
+		@Override
+		public String toString() {
+			return "Courses [categorie=" + categorie + ", voiture=" + voiture + "]";
+		}
+		
 		}
 	
 	
