@@ -41,13 +41,9 @@ public class Courses {
 				gagnant.add(v.temp());
 			}
 			Collections.sort(gagnant);
-			 for (Double entier : gagnant) {
-		            System.out.println(entier);
-		        }
 			for(Double g : gagnant) {
 				for(Voiture v : voiture) {
-				   if(v.temp()==g)
-					  
+				   if(v.temp()==g)	  
 					  gagnantfinal.add(v);
 			}
 				}
